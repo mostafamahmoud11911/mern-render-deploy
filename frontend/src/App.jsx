@@ -14,7 +14,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const {data} = await axios.post(`http://localhost:5500/api/auth/register`);
+      const {data} = await axios.post(`http://localhost:5500/api/auth/register`, user);
       console.log(data)
     } catch (error) {
       console.log(error);
