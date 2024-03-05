@@ -14,7 +14,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const {data} = await axios.post(`http://localhost:5500/api/auth/register`, user);
+      const {data} = await axios.post(`https://backend-yrn3.onrender.com/api/auth/register`, user);
       console.log(data)
     } catch (error) {
       console.log(error);
@@ -24,7 +24,7 @@ function App() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const {data} = await axios.get('http://localhost:5500/api/auth');
+        const {data} = await axios.get('https://backend-yrn3.onrender.com/api/auth');
         console.log(data)
       } catch (error) {
         console.log(error);
