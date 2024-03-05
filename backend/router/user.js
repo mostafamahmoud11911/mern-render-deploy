@@ -11,7 +11,7 @@ console.log(newUser)
     const savedUser = await newUser.save();
     res.status(201).json(savedUser);
   } catch (error) {
-    res.status(504).json(error);
+    res.status(500).json(error);
   }
 });
 
