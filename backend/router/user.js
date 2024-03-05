@@ -6,7 +6,7 @@ const router = express.Router();
 router.post("/register", async (req, res) => {
   const body = req.body;
   const newUser = new user(body);
-
+console.log(newUser)
   try {
     const savedUser = await newUser.save();
     res.status(201).json(savedUser);
