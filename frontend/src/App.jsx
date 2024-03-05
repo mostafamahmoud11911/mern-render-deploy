@@ -14,10 +14,8 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post(
-        `http://localhost:5500/api/auth/register`, user
-      );
-      console.log(data);
+      const {data} = await axios.post(`http://localhost:5500/api/auth/register`);
+      console.log(data)
     } catch (error) {
       console.log(error);
     }
@@ -26,8 +24,8 @@ function App() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5500/api/auth");
-        console.log(data);
+        const {data} = await axios.get('http://localhost:5500/api/auth');
+        console.log(data)
       } catch (error) {
         console.log(error);
       }
